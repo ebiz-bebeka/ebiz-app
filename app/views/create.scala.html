@@ -1,0 +1,20 @@
+@(taskForm : Form[Task])
+
+@import play.api.data.Form
+@import models.Task
+
+@main("Create Task") {
+
+    <h2>Create Task</h2>
+
+    @helper.form(action = helper.CSRF(routes.TaskController.save())) {
+        @helper.inputText(taskForm("id"))
+        @helper.inputText(taskForm("description"))
+        @helper.inputText(taskForm("priority"))
+        <!-- TODO: Checkbox for DONE. -->
+    }
+
+    <button type="submit">Create Task</button>
+
+
+}

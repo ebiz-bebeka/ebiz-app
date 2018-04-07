@@ -1,0 +1,6 @@
+
+/* List of Tasks table columns. */
+.col-done { width: 5%; text-align: center; }
+.col-id { width: 10%; }
+.col-description { width: 60%; }
+.col-priority { width: 15%; }
