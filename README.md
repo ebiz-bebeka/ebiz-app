@@ -1,13 +1,13 @@
-## Task List App
+## Panda3shoeS
 
-The app helps you organise your tasks.
+_Online footwear shopping made easy._
 
 ### Features (including planned)
- - Create, view, edit, and delete tasks.
- - Assign priority to a task: low, normal, or high.
- - Set due date of a task.
- - Keep track of task completeness.
- - Support the authors with a PayPal donation.
+ - View available goods.
+ - Search using granular filtering system.
+ - Manage your shopping cart.
+ - View history of orders.
+ - Pay with PayPal.
  
 ### Authors
  - Szymon Bartkowiak / 228193
