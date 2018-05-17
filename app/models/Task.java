@@ -20,7 +20,7 @@ public class Task extends Model {
     public Priority priority;
     public Boolean done;
 
-    public Task(long id, String description, Priority priority, boolean done) {
+    public Task(long id, String description, Task.Priority priority, boolean done) {
         this.id = id;
         this.description = description;
         this.priority = priority;

@@ -1,4 +1,4 @@
-name := """task-list-app"""
+name := """damp-wildwood-52313"""
 organization := "pl.edu.pwr.bbk"
 
 version := "1.0-SNAPSHOT"
