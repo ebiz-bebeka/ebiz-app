@@ -14,3 +14,6 @@ The app helps you organise your tasks.
  - Andrii Bida / 231966
  - Aleksander Kiedrzyn / 228196
  
+ ---
+ 
+ Deployed app: https://unnamed228193.herokuapp.com/store (temporarily)
