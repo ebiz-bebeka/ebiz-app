@@ -16,4 +16,4 @@ The app helps you organise your tasks.
  
  ---
  
- Deployed app: https://unnamed228193.herokuapp.com/store (temporarily)
+ Deployed app: https://ebiz-app.herokuapp.com/store
