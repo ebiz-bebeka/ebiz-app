@@ -16,4 +16,4 @@ _Online footwear shopping made easy._
  
  ---
  
- Deployed app: https://ebiz-app.herokuapp.com/store
+ Deployed app: https://panda3shoes.herokuapp.com/
