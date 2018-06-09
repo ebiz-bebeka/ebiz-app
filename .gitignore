@@ -1,6 +1,11 @@
 logs
 target
 build
+
+# Ignore auto-generated SQL files.
+conf/evolutions
+
+# IntelliJ IDEA files we don't need to be shared.
 /.idea
 /.idea_modules
 /.classpath
@@ -8,3 +13,4 @@ build
 /.settings
 /.gradle
 /RUNNING_PID
+*.iml
