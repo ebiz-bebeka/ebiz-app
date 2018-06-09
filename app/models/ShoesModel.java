@@ -1,6 +1,7 @@
 package models;
 
 import io.ebean.*;
+import io.ebean.annotation.*;
 
 import models.enums.ShoesColor;
 import models.enums.ShoesModelType;
@@ -14,15 +15,19 @@ public class ShoesModel extends Model {
     @Id
     public int id;
 
+    @NotNull
     @ManyToOne
     public ShoesUserCategory userCategory;
 
+    @NotNull
     @ManyToOne
     public ShoesModelType type;
 
+    @NotNull
     @ManyToOne
     public ShoesManufacturer manufacturer;
 
+    @NotNull
     @ManyToOne
     public ShoesColor color;
 
