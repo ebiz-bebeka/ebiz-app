@@ -1,1 +1,1 @@
-web: target/universal/stage/bin/damp-wildwood-52313 -Dhttp.port=${PORT}
+web: target/universal/stage/bin/panda3shoes -Dhttp.port=${PORT}
