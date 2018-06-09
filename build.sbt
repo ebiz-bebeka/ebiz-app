@@ -1,5 +1,5 @@
-name := """damp-wildwood-52313"""
-organization := "pl.edu.pwr.bbk"
+name := """panda3shoes"""
+organization := "pl.edu.pwr.ebct.bbk"
 
 version := "1.0-SNAPSHOT"
 
