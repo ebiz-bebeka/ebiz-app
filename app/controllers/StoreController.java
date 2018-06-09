@@ -5,6 +5,6 @@ import views.html.*;
 
 public class StoreController extends Controller {
     public Result showStore() {
-        return ok(index.render("Panda3shoeS"));
+        return ok(store.render("Panda3shoeS"));
     }
 }
