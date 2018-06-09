@@ -4,7 +4,7 @@ import play.mvc.*;
 import views.html.*;
 
 public class StoreController extends Controller {
-    public Result showStore() {
-        return ok(store.render("Panda3shoeS"));
+    public Result showHomepage() {
+        return ok(homepage.render("Panda3shoeS"));
     }
 }

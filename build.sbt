@@ -10,7 +10,8 @@ scalaVersion := "2.12.4"
 libraryDependencies += guice
 libraryDependencies += jdbc
 
-libraryDependencies += "org.webjars" % "bootstrap" % "4.0.0-2"
-libraryDependencies += "org.webjars" % "font-awesome" % "5.0.9"
+libraryDependencies += "org.webjars" % "bootstrap" % "4.1.1"
+libraryDependencies += "org.webjars" % "font-awesome" % "5.0.13"
+libraryDependencies += "org.webjars" % "jquery" % "3.3.1-1"
 
 libraryDependencies += "org.postgresql" % "postgresql" % "42.2.2"
