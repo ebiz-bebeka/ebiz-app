@@ -28,6 +28,7 @@ create table shoes_model (
   genuine_leather               boolean,
   months_of_warranty            integer,
   pieces_available              integer,
+  image_filename                varchar(255),
   constraint pk_shoes_model primary key (id)
 );
 

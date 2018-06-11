@@ -37,6 +37,7 @@ public class ShoesModel extends Model {
     public Boolean genuineLeather;
     public Integer monthsOfWarranty;
     public Integer piecesAvailable;
+    public String imageFilename;
 
     public static final Finder<Integer, ShoesModel> find = new Finder<>(ShoesModel.class);
 }
