@@ -37,6 +37,16 @@ public class ShoesModel extends Model {
     public Boolean genuineLeather;
     public Integer monthsOfWarranty;
     public Integer piecesAvailable;
+    public String name;
+    public String photo;
 
     public static final Finder<Integer, ShoesModel> find = new Finder<>(ShoesModel.class);
+
+    public ShoesModel(int id, Double price, String name, String photo)
+    {
+        this.id = id;
+        this.price = price;
+        this.name = name;
+        this.photo = photo;
+    }
 }

@@ -13,18 +13,12 @@
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Services</a>
-                </li>
                 @if(isLoggedIn) {
                 <li class="nav-item @("active".when(page == "Profile"))">
                     <a class="nav-link" href="@routes.StoreController.profile()">@userInfo.getEmail()</a></li>
                 </li>
                 <li class="nav-item @("active".when(page == "Cart"))">
-                    <a class="nav-link" href="@routes.CartController.cart()">Cart</a>
+                    <a class="nav-link" href="@routes.CartController.cart()">Cart:@CartModel.shoesInCart.length</a>
                 </li>
                 }
                 @if(isLoggedIn) {
