@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 GET     /                           controllers.StoreController.index()
 GET     /cart                       controllers.CartController.cart()
 GET     /login                      controllers.StoreController.login()
