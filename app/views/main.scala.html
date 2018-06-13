@@ -1,4 +1,4 @@
-@(title: String)(content: Html)
+@(page: String, isLoggedIn: Boolean, userInfo: UserModel)(content: Html)
 
 <!DOCTYPE html>
 <html lang="en">
@@ -9,7 +9,7 @@
         <meta name="description" content="Online footwear store providing a big choice of shoes and beautiful UI.">
         <meta name="author" content="Panda3shoeS Team">
 
-        <title>@title</title>
+        <title>Panda3shoeS</title>
 
         <link rel="stylesheet" href="@routes.Assets.at("lib/bootstrap/css/bootstrap.css")">
         <link rel="stylesheet" href="@routes.Assets.at("css/main.css")">
@@ -17,7 +17,7 @@
     </head>
 
     <body>
-        @navbar()
+        @navbar(page, isLoggedIn, userInfo)
 
         @content
 

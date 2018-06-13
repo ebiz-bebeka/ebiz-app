@@ -1,6 +1,9 @@
-GET     /                           controllers.StoreController.showHomepage()
-GET     /cart                       controllers.CartController.show()
-GET     /login                      controllers.LoginController.show()
+GET     /                           controllers.StoreController.index()
+GET     /cart                       controllers.CartController.cart()
+GET     /login                      controllers.StoreController.login()
+POST    /login                      controllers.StoreController.postLogin()
+GET     /profile                    controllers.StoreController.profile()
+GET     /logout                     controllers.StoreController.logout()
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file: String)
