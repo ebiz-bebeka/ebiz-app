@@ -1,0 +1,19 @@
+@(message: String, isLoggedIn: Boolean, userInfo: UserModel, registerForm: Form[views.formdata.RegisterFormData])
+
+@main(message, isLoggedIn, userInfo) {
+    <div class="container">
+        <div class="container">
+        @helper.form(action = routes.StoreController.postRegister()) {
+
+            @helper.inputText(registerForm("name"))
+
+            @helper.inputText(registerForm("email"))
+
+            @helper.inputPassword(registerForm("password"))
+
+            <input class="btn" type="submit" value="Register">
+            }
+        </div>
+    </div>
+        <!-- /.container -->
+}

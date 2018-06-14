@@ -1,17 +1,17 @@
 @(message: String, isLoggedIn: Boolean, userInfo: UserModel, loginForm: Form[views.formdata.LoginFormData])
 
-@main(message, isLoggedIn, userInfo) {
-    <div class="container">
+    @main(message, isLoggedIn, userInfo) {
         <div class="container">
-        @helper.form(action = routes.StoreController.postLogin()) {
+            <div class="container">
+            @helper.form(action = routes.StoreController.postLogin()) {
 
-            @helper.inputText(loginForm("email"))
+                @helper.inputText(loginForm("email"))
 
-            @helper.inputPassword(loginForm("password"))
+                @helper.inputPassword(loginForm("password"))
 
-            <input class="btn" type="submit" value="Login">
-        }
+                <input class="btn" type="submit" value="Login">
+                }
+            </div>
         </div>
-    </div>
-        <!-- /.container -->
-}
+            <!-- /.container -->
+    }
