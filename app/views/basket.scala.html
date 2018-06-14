@@ -2,20 +2,35 @@
 
 @main(message, isLoggedIn, userInfo) {
     <div class="container">
+        @for(index <- 0 until CartModel.shoesInCart.length) {
          <div class="row">
             <div class="col-lg-12 col-md-12 mb-12">
                 <div class="row">
-                    <div class="col-md-4"><a href="#"><img class="d-block img-fluid" src="@routes.Assets.at("img/700x400.png")" alt=""></a></div>
+                    <div class="col-md-4"><a href="#"><img class="d-block img-fluid" src="@CartModel.shoesInCart.get(index).photo" alt=""></a></div>
                     <div class="col-md-8">
                         <div class="card-body">
                             <h4 class="card-title">
-                                <a href="#">Item One</a>
+                                <a href="#">@CartModel.shoesInCart.get(index).name</a>
                             </h4>
-                            <h5>$24.99</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                            <h5>$@CartModel.shoesInCart.get(index).price</h5>
                         </div>
                         <div class="card-footer">
-                            <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                            <a class="btn btn-danger" href="@routes.CartController.removeFromCart(index)">Remove from cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        }
+        <div class="row">
+            <div class="col-lg-12 col-md-12 mb-12">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                <a href="#">Sum</a>
+                            </h4>
+                            <h5>$@CartModel.sum()</h5>
                         </div>
                     </div>
                 </div>
