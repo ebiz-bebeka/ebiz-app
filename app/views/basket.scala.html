@@ -2,17 +2,17 @@
 
 @main(message, isLoggedIn, userInfo) {
     <div class="container">
-        @for(index <- 0 until CartModel.shoesInCart.length) {
+        @for(index <- 0 until CartModel.carts.get(userInfo.getName).length) {
          <div class="row">
             <div class="col-lg-12 col-md-12 mb-12">
                 <div class="row">
-                    <div class="col-md-4"><a href="#"><img class="d-block img-fluid" src="@CartModel.shoesInCart.get(index).photo" alt=""></a></div>
+                    <div class="col-md-4"><a href="#"><img class="d-block img-fluid" src="@CartModel.carts.get(userInfo.getName).get(index).photo" alt=""></a></div>
                     <div class="col-md-8">
                         <div class="card-body">
                             <h4 class="card-title">
-                                <a href="#">@CartModel.shoesInCart.get(index).name</a>
+                                <a href="#">@CartModel.carts.get(userInfo.getName).get(index).name</a>
                             </h4>
-                            <h5>$@CartModel.shoesInCart.get(index).price</h5>
+                            <h5>$@CartModel.carts.get(userInfo.getName).get(index).price</h5>
                         </div>
                         <div class="card-footer">
                             <a class="btn btn-danger" href="@routes.CartController.removeFromCart(index)">Remove from cart</a>
@@ -25,12 +25,16 @@
         <div class="row">
             <div class="col-lg-12 col-md-12 mb-12">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-6">
                         <div class="card-body">
-                            <h4 class="card-title">
-                                <a href="#">Sum</a>
-                            </h4>
-                            <h5>$@CartModel.sum()</h5>
+                            <h4 class="card-title">Sum: $@CartModel.sum(userInfo.getName)</h4>
+                            <h4 class="card-title">Items in cart:@CartModel.carts.get(userInfo.getName).length</h4>
+                            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                                <input type="hidden" name="cmd" value="_s-xclick">
+                                <input type="hidden" name="hosted_button_id" value="9VYS6VM6MKP84">
+                                <input type="image" src="https://www.paypalobjects.com/pl_PL/PL/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal – Płać wygodnie i bezpiecznie">
+                                <img alt="" border="0" src="https://www.paypalobjects.com/pl_PL/i/scr/pixel.gif" width="1" height="1">
+                            </form>
                         </div>
                     </div>
                 </div>

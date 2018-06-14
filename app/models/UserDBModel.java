@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class UserDBModel {
 
-    private static Map<String, UserModel> userinfos = new HashMap<String, UserModel>();
+    public static Map<String, UserModel> userinfos = new HashMap<String, UserModel>();
     static
     {
         userinfos.put("test@wp.pl", new UserModel("test", "test@wp.pl","pass"));
@@ -15,8 +15,20 @@ public class UserDBModel {
         userinfos.put(email, new UserModel(name, email, password));
     }
 
-
     public static boolean isUser(String email) {
+        return userinfos.containsKey(email);
+    }
+
+    public static boolean isUser(String email, String name) {
+
+        for (Map.Entry<String, UserModel> user : userinfos.entrySet())
+        {
+            if (user.getValue().getName() == name)
+            {
+                return true;
+            }
+        }
+
         return userinfos.containsKey(email);
     }
 
