@@ -1,0 +1,27 @@
+@(message: String, isLoggedIn: Boolean, userInfo: UserModel)
+
+@main(message, isLoggedIn, userInfo) {
+    <div class="container">
+         <div class="row">
+            <div class="col-lg-12 col-md-12 mb-12">
+                <div class="row">
+                    <div class="col-md-4"><a href="#"><img class="d-block img-fluid" src="@routes.Assets.at("img/700x400.png")" alt=""></a></div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                <a href="#">Item One</a>
+                            </h4>
+                            <h5>$24.99</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <!-- /.row -->
+    </div>
+        <!-- /.container -->
+}
